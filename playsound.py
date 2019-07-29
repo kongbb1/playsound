@@ -39,7 +39,8 @@ def _playsoundWin(sound, block = True):
 
     if block:
         sleep(float(durationInMS) / 1000.0)
-
+    winCommand('close "' + alias + '"')
+    
 def _playsoundOSX(sound, block = True):
     '''
     Utilizes AppKit.NSSound. Tested and known to work with MP3 and WAVE on
